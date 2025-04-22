@@ -18,6 +18,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <h1>Paxalolis</h1>
+                     <!-- <img class="logo_img" src="./recursos/imagenes tours/logoP.png" alt="Logo Paxalolis"> -->
                     <p class="tagline">Descubre la magia de Cuetzalan</p>
                 </div>
                 <div class="menu-toggle" id="menu-toggle">
@@ -60,7 +61,7 @@
                 </div>
                 
                 <div class="tours-grid">
-                    <div class="tour-card" data-category="naturaleza">
+                    <div class="tour-card tour-item" data-category="naturaleza">
                         <div class="tour-image">
                             <img src="/api/placeholder/400/250" alt="Cascada Las Brisas">
                             <div class="tour-badge">Más Popular</div>
@@ -79,7 +80,7 @@
                         </div>
                     </div>
                     
-                    <div class="tour-card" data-category="cultura">
+                    <div class="tour-card tour-item" data-category="cultura">
                         <div class="tour-image">
                             <img src="/api/placeholder/400/250" alt="Ritual de los Voladores">
                         </div>
@@ -97,9 +98,9 @@
                         </div>
                     </div>
                     
-                    <div class="tour-card" data-category="aventura">
+                    <div class="tour-card tour-item" data-category="aventura">
                         <div class="tour-image">
-                            <img src="/api/placeholder/400/250" alt="Grutas Kaskalpak">
+                            <img src="./recursos/imagenes tours/cascadaLasHamacas2.jpeg" alt="Grutas Kaskalpak">
                         </div>
                         <div class="tour-info">
                             <h3>Grutas Kaskalpak</h3>
@@ -115,7 +116,7 @@
                         </div>
                     </div>
                     
-                    <div class="tour-card" data-category="naturaleza">
+                    <div class="tour-card tour-item" data-category="naturaleza">
                         <div class="tour-image">
                             <img src="/api/placeholder/400/250" alt="Tour Cafetalero">
                         </div>
@@ -133,7 +134,7 @@
                         </div>
                     </div>
                     
-                    <div class="tour-card" data-category="cultura">
+                    <div class="tour-card tour-item" data-category="cultura">
                         <div class="tour-image">
                             <img src="/api/placeholder/400/250" alt="Taller de Textiles">
                         </div>
@@ -151,9 +152,9 @@
                         </div>
                     </div>
                     
-                    <div class="tour-card" data-category="aventura">
+                    <div class="tour-card tour-item" data-category="aventura">
                         <div class="tour-image">
-                            <img src="/api/placeholder/400/250" alt="Tirolesa y Rappel">
+                            <img src="./recursos/imagenes tours/cascadaLasBrisas.jpeg" alt="Tirolesa y Rappel">
                         </div>
                         <div class="tour-info">
                             <h3>Tirolesa y Rappel</h3>
@@ -280,10 +281,55 @@
                             <button class="tab-btn" data-tab="gastronomia">Gastronomía</button>
                         </div>
                         
-                        <div class="tab-content active" id="historia">
+                        <div class="tab-content active" data-tab-content="historia">
                             <h3>Historia de Cuetzalan</h3>
-                            <p>Cuetzalan fue fundado en el siglo XII por grupos nahuas. Su nombre proviene del náhuatl "Quetzalan" que significa "lugar de quetzales". En 1547
+                            <p>Cuetzalan fue fundado en el siglo XII por grupos nahuas. Su nombre proviene del náhuatl "Quetzalan" que significa "lugar de quetzales". En 1547</p>
+                        </div>
+                        <div class="tab-content" data-tab-content="cultura">
+                            <h3>Cultura de Cuetzalan</h3>
+                            <p>Cuetzalan pueblo mágico donde la herencia náhuatl cobra vida con danzas ancestrales, coloridos bordados, ceremonias rituales, música de huapango y una espiritualidad que enamora.</p>
+                        </div>
+                        <div class="tab-content" data-tab-content="gastronomia">
+                            <h3>Gastronomía de Cuetzalan</h3>
+                            <p>Cuetzalan: donde los sueños se tejen en telares de tradición y los sabores guardan secretos milenarios en cada sorbo de café y especias.</p>
+                        </div>
+
+                  <!-- Modal Reutilizable -->
+<div class="modal" id="tourModal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-image-container">
+          <img class="modal-image" src="" alt="">
+        </div>
+        <div class="modal-content">
+          <h2 class="modal-title"></h2>
+          <div class="modal-meta">
+            <span class="modal-duration"><i class="fas fa-clock"></i></span>
+            <span class="modal-difficulty"><i class="fas fa-hiking"></i></span>
+          </div>
+          <div class="modal-description"></div>
+          <div class="modal-includes">
+            <h3><i class="fas fa-check-circle"></i> Lo que incluye:</h3>
+            <ul class="includes-list"></ul>
+          </div>
+          <div class="modal-footer">
+            <span class="modal-price"></span>
+            <button class="btn btn-primary btn-reserve">Reservar Ahora</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 <script src="/main.js"></script>
+<script src="./testimonial.js"></script>
+<script src="./filtros.js"></script>
+<script src="./filtrosInferior.js"></script>
+<script src="./modal.js"></script>
+
 </body>
 
 </html>
