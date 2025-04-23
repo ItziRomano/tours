@@ -150,11 +150,16 @@ img {
     margin: 0 auto;
 }
 
-.logo h1 {
+.logo {
     font-family: 'Pacifico', cursive;
     color: var(--primary);
     margin: 0;
     font-size: 1.8rem;
+    
+}
+
+.logo_img{
+    margin-left: 25px;
 }
 
 /* .logo_img {
@@ -225,7 +230,11 @@ img {
 /* Hero Section */
 .hero {
     height: 100vh;
+<<<<<<< HEAD
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('');
+=======
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('./imagenes/cascadaCorazonDelBosque.jpeg');
+>>>>>>> img
     background-size: cover;
     background-position: center;
     display: flex;
