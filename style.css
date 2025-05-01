@@ -150,12 +150,22 @@ img {
     margin: 0 auto;
 }
 
-.logo h1 {
+.logo {
     font-family: 'Pacifico', cursive;
     color: var(--primary);
     margin: 0;
     font-size: 1.8rem;
+    
 }
+
+.logo_img{
+    margin-left: 25px;
+}
+
+/* .logo_img {
+    width: 120px;
+    margin-left: 15px;
+} */
 
 .tagline {
     font-family: 'Montserrat', sans-serif;
@@ -220,7 +230,11 @@ img {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('/api/placeholder/1400/800');
+<<<<<<< HEAD
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('');
+=======
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('./imagenes/cascadaCorazonDelBosque.jpeg');
+>>>>>>> img
     background-size: cover;
     background-position: center;
     display: flex;
@@ -836,6 +850,209 @@ img {
     min-height: 120px;
     resize: vertical;
 }
+
+/* Estilos del Modal - Versión Corregida */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overscroll-behavior: contain;
+  }
+  
+  .modal.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+  }
+  
+  .modal-container {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    margin: 5vh auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal.active .modal-container {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    min-height: 0; /* Importante para contener el contenido */
+  }
+  
+  .modal-image-container {
+    min-height: 200px;
+    overflow: hidden;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .modal-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .modal-description {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    padding-right: 5px;
+    max-height: 100px;
+  }
+  
+  .modal-includes {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .modal-footer {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    max-height: 100px;
+  }
+  
+  /* Estilo corregido para el botón cerrar */
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: all 0.3s;
+  }
+  
+  .close-modal:hover {
+    background: #f1f1f1;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .modal-container {
+      margin: 2vh auto;
+      max-height: 96vh;
+      width: 95%;
+    }
+  
+    .modal-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      height: auto;
+      max-height: calc(96vh - 40px);
+    }
+  
+    .modal-image-container {
+      height: 200px;
+      min-height: 200px;
+    }
+  
+    .modal-content {
+      padding: 20px;
+      height: auto;
+      max-height: none;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .modal-description {
+      overflow: visible;
+      flex-grow: 0;
+      margin-bottom: 15px;
+    }
+  
+    .modal-includes {
+      max-height: none;
+      overflow: visible;
+      margin-bottom: 15px;
+    }
+  
+    .modal-footer {
+      margin-top: auto;
+      position: sticky;
+      bottom: 0;
+      background: white;
+      padding: 15px 0;
+      border-top: 1px solid #eee;
+    }
+  
+    .modal-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    .modal-meta {
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Scroll personalizado */
+  /* .modal-description::-webkit-scrollbar,
+  .modal-includes::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .modal-description::-webkit-scrollbar-thumb,
+  .modal-includes::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+  } */
+  }
 
 /* Footer */
 .footer {
