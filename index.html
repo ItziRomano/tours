@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Paxalolis - Tours en Cuetzalan</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;500&family=Pacifico&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paxalolis - Tours en Cuetzalan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;500&family=Pacifico&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paxalolis - Tours en Cuetzalan</title>
@@ -23,285 +25,465 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-    <body>
-        <!-- Navegación -->
-        <header class="header">
-            <nav class="navbar">
-                <div class="logo">
-                    <h1>Paxalolis</h1>
-                    <p class="tagline">Descubre la magia de Cuetzalan</p>
-                </div>
-                <div class="menu-toggle" id="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#inicio" class="active">Inicio</a></li>
-                    <li><a href="#tours">Tours</a></li>
-                    <li><a href="#experiencia">Experiencias</a></li>
-                    <li><a href="#descubre">Descubre</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-    
-        <!-- Hero Section -->
-        <section class="hero" id="inicio">
-            <div class="hero-content">
-                <h1>Explora Cuetzalan</h1>
-                <h2>Vive la experiencia de la Sierra Norte de Puebla</h2>
-                <p>Descubre cascadas, grutas, tradiciones y gastronomía con guías locales expertos.</p>
-                <a href="#tours" class="btn btn-primary">Explorar Tours</a>
+<body>
+    <!-- Navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./imagenes/logoPaxalolis-removebg-preview (1).png" height="150px" width="150px" alt="">
+                <p class="tagline">Descubre la magia de Cuetzalan</p>
             </div>
-        </section>
-    
-        <!-- Tours -->
-        <section class="tours-section" id="tours">
-            <div class="container">
-                <h2 class="section-title">Nuestros Tours Destacados</h2>
-                <div class="separator"></div>
-                <p class="section-subtitle">Experiencias únicas para conectar con la naturaleza y cultura de Cuetzalan</p>
-                
-                <div class="tour-filters">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="naturaleza">Naturaleza</button>
-                    <button class="filter-btn" data-filter="cultura">Cultura</button>
-                    <button class="filter-btn" data-filter="aventura">Aventura</button>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#experiencia">Experiencias</a></li>
+                <li><a href="#descubre">Descubre</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Explora Cuetzalan</h1>
+            <h2>Vive la experiencia de la Sierra Norte de Puebla</h2>
+            <p>Descubre cascadas, grutas, tradiciones y gastronomía con guías locales expertos.</p>
+            <a href="#tours" class="btn btn-primary">Explorar Tours</a>
+        </div>
+    </section>
+
+    <!-- Tours -->
+    <section class="tours-section" id="tours">
+        <div class="container">
+            <h2 class="section-title">Nuestros Tours Destacados</h2>
+            <div class="separator"></div>
+            <p class="section-subtitle">Experiencias únicas para conectar con la naturaleza y cultura de Cuetzalan</p>
+
+            <div class="tour-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="naturaleza">Naturaleza</button>
+                <button class="filter-btn" data-filter="cultura">Cultura</button>
+                <button class="filter-btn" data-filter="aventura">Aventura</button>
+            </div>
+
+            <div class="tours-grid">
+                <div class="tour-card" data-category="naturaleza">
+                    <div class="tour-image">
+                        <img src="./imagenes/cascadaLasBrisas.jpeg" alt="Cascada Las Brisas">
+                        <div class="tour-badge">Más Popular</div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Cascada Las Brisas</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 4 horas</span>
+                            <span><i class="fas fa-hiking"></i> Moderado</span>
+                        </div>
+                        <p>Explora una de las cascadas más impresionantes de la región, con oportunidad de nadar en sus
+                            aguas cristalinas.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $350 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="tours-grid">
-                    <div class="tour-card" data-category="naturaleza">
-                        <div class="tour-image">
-                            <img src="/api/placeholder/400/250" alt="Cascada Las Brisas">
-                            <div class="tour-badge">Más Popular</div>
+
+                <div class="tour-card" data-category="cultura">
+                    <div class="tour-image">
+                        <img src="./imagenes/cascadaLaEscondida2.jpg" alt="Cascada La Escondida">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Cascada La Escondida</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 5 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
                         </div>
-                        <div class="tour-info">
-                            <h3>Cascadas Las Brisas</h3>
-                            <div class="tour-meta">
-                                <span><i class="fas fa-clock"></i> 4 horas</span>
-                                <span><i class="fas fa-hiking"></i> Moderado</span>
-                            </div>
-                            <p>Explora una de las cascadas más impresionantes de la región, con oportunidad de nadar en sus aguas cristalinas.</p>
-                            <div class="tour-footer">
-                                <span class="tour-price">Desde $350 MXN</span>
-                                <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                            </div>
+                        <p>Es un destino ideal para los amantes de la naturaleza y la aventura, ya que ofrece
+                            actividades como rappel sobre cascadas, cañonismo, senderismo y tirolesas.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $400 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
                         </div>
                     </div>
-                    
-                    <div class="tour-card" data-category="cultura">
-                        <div class="tour-image">
-                            <img src="/api/placeholder/400/250" alt="Ritual de los Voladores">
+                </div>
+
+                <div class="tour-card" data-category="aventura">
+                    <div class="tour-image">
+                        <img src="./imagenes/cascadaLasHamacas.jpeg" alt="Cascada Las Hamacas">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Cascada Las Hamacas</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 6 horas</span>
+                            <span><i class="fas fa-mountain"></i> Intenso</span>
                         </div>
-                        <div class="tour-info">
-                            <h3>Ritual de los Voladores</h3>
-                            <div class="tour-meta">
-                                <span><i class="fas fa-clock"></i> 5 horas</span>
-                                <span><i class="fas fa-shoe-prints"></i> Ligero</span>
-                            </div>
-                            <p>Conoce la tradición ancestral de los Voladores de Papantla, declarada Patrimonio Cultural Inmaterial de la Humanidad.</p>
-                            <div class="tour-footer">
-                                <span class="tour-price">Desde $400 MXN</span>
-                                <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                            </div>
+                        <p>Lo que la hace especial es que cuenta con toboganes naturales de roca, donde el agua
+                            cristalina fluye formando pozas ideales para nadar y relajarse.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $500 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
                         </div>
                     </div>
-                    
-                    <div class="tour-card" data-category="aventura">
-                        <div class="tour-image">
-                            <img src="/api/placeholder/400/250" alt="Grutas Kaskalpak">
+                </div>
+
+                <div class="tour-card" data-category="naturaleza">
+                    <div class="tour-image">
+                        <img src="./imagenes/cascadaPozaVerde.jpeg" alt="Cascada Poza Verde">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Cascada Poza Verde</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 3 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
                         </div>
-                        <div class="tour-info">
-                            <h3>Grutas Kaskalpak</h3>
-                            <div class="tour-meta">
-                                <span><i class="fas fa-clock"></i> 6 horas</span>
-                                <span><i class="fas fa-mountain"></i> Intenso</span>
-                            </div>
-                            <p>Adéntrate en las misteriosas grutas y descubre formaciones milenarias en un recorrido lleno de aventura.</p>
-                            <div class="tour-footer">
-                                <span class="tour-price">Desde $500 MXN</span>
-                                <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                            </div>
+                        <p>Conoce el proceso del café desde la planta hasta la taza, con degustación incluida de café
+                            local.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $300 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
                         </div>
                     </div>
-                    
-                    <div class="tour-card" data-category="naturaleza">
-                        <div class="tour-image">
-                            <img src="/api/placeholder/400/250" alt="Tour Cafetalero">
+                </div>
+
+                <div class="tour-card" data-category="cultura">
+                    <div class="tour-image">
+                        <img src="./imagenes/cascadaSecreta.jpeg" alt="Cascada Secreta">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Cascada Secreta</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 2 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
                         </div>
-                        <div class="tour-info">
-                            <h3>Tour Cafetalero</h3>
-                            <div class="tour-meta">
-                                <span><i class="fas fa-clock"></i> 3 horas</span>
-                                <span><i class="fas fa-shoe-prints"></i> Ligero</span>
-                            </div>
-                            <p>Conoce el proceso del café desde la planta hasta la taza, con degustación incluida de café local.</p>
-                            <div class="tour-footer">
-                                <span class="tour-price">Desde $300 MXN</span>
-                                <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                            </div>
+                        <p>Es una ruta de 2 km en un entorno virgen, donde se camina por veredas y ríos para aprender
+                            sobre la riqueza natural y la importancia del agua en Cuetzalan. Su objetivo es fomentar la
+                            educación ambiental y la armonía con la naturaleza.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $250 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
                         </div>
                     </div>
-                    
-                    <div class="tour-card" data-category="cultura">
-                        <div class="tour-image">
-                            <img src="/api/placeholder/400/250" alt="Taller de Textiles">
+                </div>
+
+                <div class="tour-card" data-category="aventura">
+                    <div class="tour-image">
+                        <img src="./imagenes/cascadaTaxipehual.jpeg" alt="Tirolesa y Rappel">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Cascada Taxipehual</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 5 horas</span>
+                            <span><i class="fas fa-mountain"></i> Intenso</span>
                         </div>
-                        <div class="tour-info">
-                            <h3>Taller de Textiles</h3>
-                            <div class="tour-meta">
-                                <span><i class="fas fa-clock"></i> 2 horas</span>
-                                <span><i class="fas fa-shoe-prints"></i> Ligero</span>
-                            </div>
-                            <p>Aprende sobre los textiles tradicionales y participa en un taller para crear tu propia pieza artesanal.</p>
-                            <div class="tour-footer">
-                                <span class="tour-price">Desde $250 MXN</span>
-                                <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                            </div>
+                        <p>Tiene una caída de 60 metros de altura y 8 metros de ancho, rodeada de exuberante vegetación
+                            y fauna local, como mapaches, tejones y acamayas.Es un destino ideal para nadar y tomar
+                            fotos desde el mirador.
+                        </p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $550 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
                         </div>
                     </div>
-                    
-                    <div class="tour-card" data-category="aventura">
-                        <div class="tour-image">
-                            <img src="/api/placeholder/400/250" alt="Tirolesa y Rappel">
+                </div>
+                <div class="tour-card" data-category="cultura">
+                    <div class="tour-image">
+                        <img src="./imagenes/pozaAtepatahuak.jpeg" alt="Cascada Secreta">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Poza Atepatahuak</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 2 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
                         </div>
-                        <div class="tour-info">
-                            <h3>Tirolesa y Rappel</h3>
-                            <div class="tour-meta">
-                                <span><i class="fas fa-clock"></i> 5 horas</span>
-                                <span><i class="fas fa-mountain"></i> Intenso</span>
-                            </div>
-                            <p>Vive la adrenalina en un recorrido que combina tirolesa sobre el cañón y rappel en cascada.</p>
-                            <div class="tour-footer">
-                                <span class="tour-price">Desde $550 MXN</span>
-                                <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                            </div>
+                        <p>Pequeña cascada que desemboca en una laguna de aguas cristalinas con aproximadamente 2 metros
+                            de profundidad, rodeada de vegetación exuberante y paredes de roca.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $250 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
                         </div>
                     </div>
+
+                </div>
+                <div class="tour-card" data-category="cultura">
+                    <div class="tour-image">
+                        <img src="./imagenes/grutaChichikazapan2.jpeg" alt="Cascada Secreta">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Gruta chichikazapan</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 2 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
+                        </div>
+                        <p>La Gruta Chichicazapan es una impresionante caverna ubicada en Cuetzalan, Puebla. tiene un
+                            río subterráneo que la atraviesa, lo que la diferencia de otras grutas secas en la región
+                        </p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $250 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card" data-category="cultura">
+                    <div class="tour-image">
+                        <img src="./imagenes/canonDelDuende2.jpeg" alt="Cascada Secreta">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Cañon Del Duende</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 2 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
+                        </div>
+                        <p>Sitio natural impresionante en Cuetzalan, Puebla, rodeado de vegetación y formaciones rocosas
+                            únicas tiene un laberinto de piedras y pequeñas casas donde, según la tradición, viven
+                            duendes. Además, una poza tipo cenote perfecta para nadar.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $250 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card" data-category="cultura">
+                    <div class="tour-image">
+                        <img src="./imagenes/yohualichan.jpeg" alt="Cascada Secreta">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Yohualichan</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 2 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
+                        </div>
+                        <p>Zona arqueológica ubicada en Cuetzalan, Puebla, y su nombre en náhuatl significa "Casa de la
+                            Noche". Fue un asentamiento totonaco,su arquitectura es similar a la de El Tajín, con
+                            estructuras adornadas con nichos característicos.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $250 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card" data-category="cultura">
+                    <div class="tour-image">
+                        <img src="./imagenes/textil.jpeg" alt="Cascada Secreta">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Textiles</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 2 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
+                        </div>
+                        <p>Los textiles son una expresión cultural y artística de la comunidad indígena, especialmente
+                            de los nahuas y totonacos. Se elaboran con técnicas ancestrales como el telar de cintura, y
+                            los diseños suelen representar elementos de la naturaleza y la cosmovisión indígena.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $250 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card" data-category="cultura">
+                    <div class="tour-image">
+                        <img src="./imagenes/cultura.jpeg" alt="Cascada Secreta">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Cultura y Naturaleza</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 2 horas</span>
+                            <span><i class="fas fa-shoe-prints"></i> Ligero</span>
+                        </div>
+                        <p>Se visita la Cascada Las Brisas, un espacio relajante con área de descanso y acceso para
+                            nadar. Luego, en el taller de telar se explica el proceso de bordado a mano, con opción de
+                            practicarlo. Finalmente, se recorre el taller de cera, único en la región, donde el proceso
+                            es artesanal y se utilizan materiales de la abeja melipona.</p>
+                        <div class="tour-footer">
+                            <span class="tour-price">Desde $250 MXN</span>
+                            <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                        </div>
+                    </div>
+
+                </div>
+
+    </section>
+
+    <!-- Experiencia -->
+    <section class="experiencia-section" id="experiencia">
+        <div class="container">
+            <h2 class="section-title">La Experiencia Paxalolis</h2>
+            <div class="separator"></div>
+            <p class="section-subtitle">Lo que nos hace diferentes</p>
+
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="experience-number">01</div>
+                    <h3>Aventura</h3>
+                    <p>Tours diseñados para todos los niveles, desde caminatas ligeras hasta expediciones intensas.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-number">02</div>
+                    <h3>Cultura</h3>
+                    <p>Conoce de primera mano las tradiciones vivas de las comunidades indígenas de la región.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-number">03</div>
+                    <h3>Gastronomía</h3>
+                    <p>Degusta los sabores auténticos de la cocina tradicional de la Sierra Norte de Puebla.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-number">04</div>
+                    <h3>Naturaleza</h3>
+                    <p>Sumérgete en paisajes impresionantes y conecta con la biodiversidad de la región.</p>
                 </div>
             </div>
-        </section>
-    
-        <!-- Experiencia -->
-        <section class="experiencia-section" id="experiencia">
-            <div class="container">
-                <h2 class="section-title">La Experiencia Paxalolis</h2>
-                <div class="separator"></div>
-                <p class="section-subtitle">Lo que nos hace diferentes</p>
-                
-                <div class="experience-grid">
-                    <div class="experience-item">
-                        <div class="experience-number">01</div>
-                        <h3>Aventura</h3>
-                        <p>Tours diseñados para todos los niveles, desde caminatas ligeras hasta expediciones intensas.</p>
+
+            <div class="testimonials">
+                <h3>Lo que dicen nuestros visitantes</h3>
+                <div class="testimonial-slider">
+                    <div class="testimonial-item active">
+                        <p>Fue un buen recorrido, la atención fue excelente, el apoyo para ingresar a las cascadas
+                            también fue muy
+                            bueno.</p>
+                        <div class="testimonial-author">
+                            <img src="./imagenes/img de usuario.png" alt="Visitante">
+                            <span>Alejandra</span>
+                        </div>
                     </div>
-                    
-                    <div class="experience-item">
-                        <div class="experience-number">02</div>
-                        <h3>Cultura</h3>
-                        <p>Conoce de primera mano las tradiciones vivas de las comunidades indígenas de la región.</p>
+                    <div class="testimonial-item">
+                        <p>La experiencia de que nos guiaras en nuestro viaje fue estupenda ya que nos mostraste de una
+                            forma
+                            divertida y amena el senderismo siempre con el ánimo de que íbamos al encuentro de lugares
+                            fascinantes y únicos.</p>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/50/50" alt="Visitante">
+                            <span>Alma</span>
+                        </div>
                     </div>
-                    
-                    <div class="experience-item">
-                        <div class="experience-number">03</div>
-                        <h3>Gastronomía</h3>
-                        <p>Degusta los sabores auténticos de la cocina tradicional de la Sierra Norte de Puebla.</p>
+                    <div class="testimonial-item">
+                        <p>Vivir un tour en Cuetzalan con Paxalolis es una experiencia profundamente enriquecedora y
+                            única.
+                            Paxalolis no solo te lleva a recorrer los rincones más emblemáticos del pueblo mágico —como
+                            las grutas,
+                            cascadas, zonas arqueológicas y mercados tradicionales—, sino que lo hace desde una
+                            perspectiva
+                            familiar.</p>
+                        <div class="testimonial-author">
+                            <img src="./imagenes/Ana yeli.png" alt="Visitante">
+                            <span>Ana Yeli</span>
+                        </div>
                     </div>
-                    
-                    <div class="experience-item">
-                        <div class="experience-number">04</div>
-                        <h3>Naturaleza</h3>
-                        <p>Sumérgete en paisajes impresionantes y conecta con la biodiversidad de la región.</p>
-                    </div>
-                </div>
-                
-                <div class="testimonials">
-                    <h3>Lo que dicen nuestros visitantes</h3>
-                    <div class="testimonial-slider">
+
+                    <div class="testimonial-item active">
+                        <p>¡El tour fue increíble! Siempre te portaste súper amable, hospitalario y con mucha
+                            disponibilidad.
+                            Respondiste todas mis dudas, 10/10 las fotos que nos tomaste y un súper plus fueron las
+                            recomendaciones sobre los lugares locales para comer y el transporte.</p>
+                        <div class="testimonial-author">
+                            <img src="./imagenes/img de usuario.png" alt="Visitante">
+                            <span>Vanesa Cruz</span>
+                        </div>
+
                         <div class="testimonial-item active">
-                            <p>"Una experiencia increíble que superó todas nuestras expectativas. Los guías conocen perfectamente la región y su cultura."</p>
+                            <p>Los guías son súper amables y cuidadosos durante las expediciones, definitivamente una
+                                experiencia
+                                única y muy agradable.</p>
                             <div class="testimonial-author">
-                                <img src="/api/placeholder/50/50" alt="Visitante">
-                                <span>Laura Martínez</span>
+                                <img src="./imagenes/img de usuario.png" alt="Visitante">
+                                <span>Yamileth</span>
+                            </div>
+
+                            <div class="testimonial-item active">
+                                <p>Excelente servicio ��. Amabilidad, puntualidad, respetuosos y muy ameno y divertido
+                                    el recorrido.
+                                    Recomiendo x1000.</p>
+                                <div class="testimonial-author">
+                                    <img src="./imagenes/alesita.png" alt="Visitante">
+                                    <span>Aresita</span>
+                                </div>
+
+                            </div>
+                            <div class="testimonial-item active">
+                                <p>Caminar las veredas de Cuetzalan con Diego, brinda un conocimiento profundo de la
+                                    zona; conoce todas
+                                    las aves, mamíferos, reptiles, hongos y plantas, además del plus que aporta el hecho
+                                    de que el náhuatl
+                                    es su lengua materna.</p>
+                                <div class="testimonial-author">
+                                    <img src="./imagenes/alesita.png" alt="Visitante">
+                                    <span>Marco Elu</span>
+                                </div>
+
+                                <div class="testimonial-controls">
+                                    <button class="testimonial-btn prev"><i class="fas fa-chevron-left"></i></button>
+                                    <div class="testimonial-dots">
+                                        <span class="dot active" data-index="0"></span>
+                                        <span class="dot" data-index="1"></span>
+                                        <span class="dot" data-index="2"></span>
+                                    </div>
+                                    <button class="testimonial-btn next"><i class="fas fa-chevron-right"></i></button>
+                                </div>
                             </div>
                         </div>
-                        <div class="testimonial-item">
-                            <p>"Los tours están muy bien organizados y ofrecen una experiencia auténtica. ¡Las cascadas son impresionantes!"</p>
-                            <div class="testimonial-author">
-                                <img src="/api/placeholder/50/50" alt="Visitante">
-                                <span>Carlos Gómez</span>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <p>"Viajamos con niños y la atención fue excelente. Adaptaron el tour para que todos pudiéramos disfrutar."</p>
-                            <div class="testimonial-author">
-                                <img src="/api/placeholder/50/50" alt="Visitante">
-                                <span>Familia Hernández</span>
-                            </div>
-                        </div>
+    </section>
+
+    <!-- Descubre Cuetzalan -->
+    <section class="descubre-section" id="descubre">
+        <div class="container">
+            <h2 class="section-title">Descubre Cuetzalan</h2>
+            <div class="separator"></div>
+            <p class="section-subtitle">Un Pueblo Mágico lleno de historia y tradición</p>
+
+            <div class="discover-grid">
+                <div class="discover-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51498.639635902546!2d-97.53508723155655!3d20.013232177338388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85da8e787fc55bbb%3A0xa563de5eecd87f26!2s73560%20Cdad.%20de%20Cuetzalan%2C%20Pue.!5e0!3m2!1ses-419!2smx!4v1746240325038!5m2!1ses-419!2smx"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- <div class="map-point" style="top: 25%; left: 40%; -->
+                    <div class=" map-tooltip">
+                        <h4>Cascada Las Brisas</h4>
+                        <p>A solo 15 minutos del centro</p>
                     </div>
-                    <div class="testimonial-controls">
-                        <button class="testimonial-btn prev"><i class="fas fa-chevron-left"></i></button>
-                        <div class="testimonial-dots">
-                            <span class="dot active" data-index="0"></span>
-                            <span class="dot" data-index="1"></span>
-                            <span class="dot" data-index="2"></span>
-                        </div>
-                        <button class="testimonial-btn next"><i class="fas fa-chevron-right"></i></button>
-                    </div>
+                </div>
+                </div>
+                <div class="map-point" style="top: 45%; left: 60%;"></div>
+                <div class="map-tooltip">
+                    <h4>Grutas Kaskalpak</h4>
+                    <p>A 30 minutos del centro</p>
                 </div>
             </div>
-        </section>
-    
-        <!-- Descubre Cuetzalan -->
-        <section class="descubre-section" id="descubre">
-            <div class="container">
-                <h2 class="section-title">Descubre Cuetzalan</h2>
-                <div class="separator"></div>
-                <p class="section-subtitle">Un Pueblo Mágico lleno de historia y tradición</p>
-                
-                <div class="discover-grid">
-                    <div class="discover-map">
-                        <img src="/api/placeholder/600/400" alt="Mapa de Cuetzalan">
-                        <div class="map-point" style="top: 25%; left: 40%;">
-                            <div class="map-tooltip">
-                                <h4>Cascada Las Brisas</h4>
-                                <p>A solo 15 minutos del centro</p>
-                            </div>
-                        </div>
-                        <div class="map-point" style="top: 45%; left: 60%;">
-                            <div class="map-tooltip">
-                                <h4>Grutas Kaskalpak</h4>
-                                <p>A 30 minutos del centro</p>
-                            </div>
-                        </div>
-                        <div class="map-point" style="top: 65%; left: 30%;">
-                            <div class="map-tooltip">
-                                <h4>Zócalo de Cuetzalan</h4>
-                                <p>Centro histórico</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="discover-info">
-                        <div class="discover-tabs">
-                            <button class="tab-btn active" data-tab="historia">Historia</button>
-                            <button class="tab-btn" data-tab="cultura">Cultura</button>
-                            <button class="tab-btn" data-tab="gastronomia">Gastronomía</button>
-                        </div>
-                        
-                        <div class="tab-content active" id="historia">
-                            <h3>Historia de Cuetzalan</h3>
-                          <p>Cuetzalan fue fundado en el siglo XII por grupos nahuas. Su nombre proviene del náhuatl "Quetzalan" que significa "lugar de quetzales". En 1547
-                        </div>
-                    </div>
+            <div class="map-point" style="top: 65%; left: 30%;"></div>
+            <div class="map-tooltip">
+                <h4>Zócalo de Cuetzalan</h4>
+                <p>Centro histórico</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="discover-info">
+            <div class="discover-tabs">
+                <button class="tab-btn active" data-tab="historia">Historia</button>
+                <button class="tab-btn" data-tab="cultura">Cultura</button>
+                <button class="tab-btn" data-tab="gastronomia">Gastronomía</button>
+            </div>
+
+            <div class="tab-content active" id="historia">
+                <div>
+                    <h3>Historia de Cuetzalan</h3>
+                    <p>Cuetzalan fue fundado en el siglo XII por grupos nahuas. Su nombre proviene del náhuatl
+                        "Quetzalan"
+                        que significa "lugar de quetzales". En 1547</p>
                 </div>
-            </div>   
-        </section>
+            </div>
+    </section>
 
 
-<!--seccion de contacto-->
+    <!--seccion de contacto-->
     <footer class="footer-distributed">
         <div class="footer-left">
             <h3>Paxalolis</h3>
@@ -316,7 +498,7 @@
                 <a href="#">Contacto</a>
             </p>
             <p class="footer-company-name">Copyright @ 2025 <strong>Paxalolis Tours</strong>
-            | Todos los Derechos Reservados</p>
+                | Todos los Derechos Reservados</p>
         </div>
 
         <div class="footer-center">
@@ -337,7 +519,7 @@
             <p class="footer-company-about">
                 <span>Sobre Nosotros</span>
                 <strong>Paxalolis</strong> te invita a vivir la experiencia y descubrir la magia de Cuetzalan.
-                
+
             </p>
             <div class="footer-icons">
                 <a href="#"><i class='bx bxl-instagram'></i></a>
@@ -346,10 +528,10 @@
             </div>
         </div>
 
-      
+
     </footer>
-  
+
     <script src="/main.js"></script>
-    </body>
+</body>
 
 </html>
