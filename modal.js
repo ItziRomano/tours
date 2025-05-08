@@ -2,46 +2,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // Datos de lo que incluye cada tour (puedes mover esto a una base de datos)
     const tourIncludes = {
       "Cascadas Las Brisas": [
-        "Guía certificado",
+        "Guía",
         "Equipo de seguridad",
-        "Botella de agua",
-        "Seguro básico",
-        "Snack local"
       ],
       "Ritual de los Voladores": [
-        "Ceremonia tradicional",
-        "Guía cultural",
+        "Guía",
         "Demostración completa",
         "Explicación antropológica",
-        "Degustación de bebida ceremonial"
       ],
       "Grutas Kaskalpak": [
-        "Guía espeleólogo",
+        "Guía",
         "Casco y lámpara",
-        "Seguro especializado",
-        "Fotografías del recorrido",
-        "Refrigerio al terminar"
+        "Chaleco salvavidas",
       ],
       "Tour Cafetalero": [
         "Recorrido por plantación",
         "Explicación del proceso",
-        "Degustación de 3 variedades",
-        "Descuento en tienda",
-        "Manual del buen catador"
+        "Guía"
       ],
       "Taller de Textiles": [
-        "Materiales incluidos",
-        "Instructor artesano",
+        "Guía",
         "Muestra de técnicas",
-        "Tu propia creación",
-        "Certificado de participación"
+        "Explicación"
       ],
       "Tirolesa y Rappel": [
         "Equipo profesional",
         "Instructores certificados",
-        "2 recorridos de tirolesa",
-        "1 descenso en rappel",
-        "Seguro de aventura"
+        "1 recorrido de tirolesa",
+        "O 1 descenso en rappel",
       ]
     };
   

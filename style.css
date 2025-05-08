@@ -607,23 +607,6 @@ img {
     display: block;
 }
 
-.map-point {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--secondary);
-    border-radius: 50%;
-    border: 3px solid var(--white);
-    box-shadow: var(--shadow-sm);
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.map-point:hover {
-    transform: translate(-50%, -50%) scale(1.2);
-}
-
 .map-tooltip {
     position: absolute;
     bottom: 130%;
@@ -669,6 +652,7 @@ img {
 
 .discover-info {
     flex: 1;
+    width: 50%;
 }
 
 .discover-tabs {
