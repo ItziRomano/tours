@@ -1,35 +1,68 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Datos de lo que incluye cada tour (puedes mover esto a una base de datos)
     const tourIncludes = {
-      "Cascadas Las Brisas": [
+      "Cascada Las Brisas": [
         "Guía",
-        "Equipo de seguridad",
+        "Casco",
+        "Chaleco salvavidas"
       ],
-      "Ritual de los Voladores": [
+      "Cascada La Escondida": [
         "Guía",
-        "Demostración completa",
-        "Explicación antropológica",
+        "Chaleco salvavidas",
+        "Casco"
       ],
-      "Grutas Kaskalpak": [
+      "Cascada Las Hamacas": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Cascada Poza Verde": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Cascada Secreta": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Cascada Taxipehual": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Poza Atepatahuak": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Gruta Chichikazapan": [
         "Guía",
         "Casco y lámpara",
-        "Chaleco salvavidas",
+        "Chaleco salvavidas"
       ],
-      "Tour Cafetalero": [
-        "Recorrido por plantación",
-        "Explicación del proceso",
-        "Guía"
-      ],
-      "Taller de Textiles": [
+      "Cañón Del Duende": [
         "Guía",
-        "Muestra de técnicas",
-        "Explicación"
+        "Casco",
+        "Chaleco salvavidas"
       ],
-      "Tirolesa y Rappel": [
-        "Equipo profesional",
-        "Instructores certificados",
-        "1 recorrido de tirolesa",
-        "O 1 descenso en rappel",
+      "Yohualichan": [
+        "Guía",
+        "Explicación de la zona",
+        "Recorrido"
+      ],
+      "Textiles": [
+        "Guía",
+        "Explicación de proceso"
+      ],
+      "Cultura y Naturaleza": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas",
+        "Recorrido por cascada",
+        "Explicación de taller de tejido",
+        "Recorrido taller de cera",
+        "Experiencia práctica de tejido y cera"
       ]
     };
   
@@ -76,6 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
             li.textContent = item;
             modalIncludes.appendChild(li);
           });
+        } else {
+          modalIncludes.innerHTML = '<li>No hay información disponible</li>';
         }
   
         // Mostrar el modal
@@ -93,11 +128,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Eventos para cerrar
     closeBtn.addEventListener('click', closeModal);
     modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
-  
+  // closeBtn.addEventListener('click', function() {
+  //   modal.classList.remove('active');
+  //   document.body.classList.remove('modal-open');
+  // });
+
     // Cerrar con Escape
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && modal.classList.contains('active')) {
         closeModal();
+        // modal.classList.remove('active');
+        // document.body.classList.remove('modal-open'); 
       }
     });
   
@@ -105,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     reserveBtn.addEventListener('click', function() {
       const tourName = modalTitle.textContent;
       alert(`Redirigiendo a reservación para: ${tourName}`);
-      // window.location.href = `/reservar?tour=${encodeURIComponent(tourName)}`;
+      window.location.href = `/reservar?tour=${encodeURIComponent(tourName)}`;
     });
 
   });
