@@ -230,8 +230,7 @@ img {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('');
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('./imagenes/cascadaCorazonDelBosque.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url('./recursos/imagenes tours/cascadaCorazonDelBosque2.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -504,7 +503,7 @@ img {
 .testimonial-slider {
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 250px;
 }
 
 .testimonial-item {
@@ -607,6 +606,23 @@ img {
     display: block;
 }
 
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 .map-tooltip {
     position: absolute;
     bottom: 130%;
@@ -652,7 +668,7 @@ img {
 
 .discover-info {
     flex: 1;
-    width: 50%;
+    width: 100%;
 }
 
 .discover-tabs {
@@ -832,208 +848,230 @@ img {
     resize: vertical;
 }
 
-/* Estilos del Modal - Versión Corregida */
-.modal {
+/* Estilos generales del modal */
+/* .modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 10000;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    overscroll-behavior: contain;
-  }
-  
-  .modal.active {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(3px);
-  }
-  
-  .modal-container {
-    position: relative;
-    background: white;
-    width: 90%;
-    max-width: 800px;
-    max-height: 90vh;
-    margin: 5vh auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-    transform: translateY(20px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .modal.active .modal-container {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  
-  .modal-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-grow: 1;
-    min-height: 0; /* Importante para contener el contenido */
-  }
-  
-  .modal-image-container {
-    min-height: 200px;
-    overflow: hidden;
-  }
-  
-  .modal-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .modal-content {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .modal-description {
-    flex-grow: 1;
-    overflow-y: auto;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    padding-right: 5px;
-    max-height: 100px;
-  }
-  
-  .modal-includes {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    max-height: 500px;
-    overflow-y: auto;
-  }
-  
-  .modal-footer {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-    max-height: 100px;
-  }
-  
-  /* Estilo corregido para el botón cerrar */
-  .close-modal {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
-    transition: all 0.3s;
-  }
-  
-  .close-modal:hover {
-    background: #f1f1f1;
-    transform: scale(1.1);
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .modal-container {
-      margin: 2vh auto;
-      max-height: 96vh;
-      width: 95%;
-    }
-  
-    .modal-grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-      height: auto;
-      max-height: calc(96vh - 40px);
-    }
-  
-    .modal-image-container {
-      height: 200px;
-      min-height: 200px;
-    }
-  
-    .modal-content {
-      padding: 20px;
-      height: auto;
-      max-height: none;
-      overflow: visible;
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .modal-description {
-      overflow: visible;
-      flex-grow: 0;
-      margin-bottom: 15px;
-    }
-  
-    .modal-includes {
-      max-height: none;
-      overflow: visible;
-      margin-bottom: 15px;
-    }
-  
-    .modal-footer {
-      margin-top: auto;
-      position: sticky;
-      bottom: 0;
-      background: white;
-      padding: 15px 0;
-      border-top: 1px solid #eee;
-    }
-  
-    .modal-title {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-  
-    .modal-meta {
-      margin-bottom: 15px;
-      font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal-container {
+    position: relative;
+    background: #fff;
+    width: 90%; */
+    /* cambio 600 */
+    /* max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    display: flex;
+    flex-direction: row; */
+    /* flex column  */
+    /* max-height: 90%; Limita la altura del modal */
+/* } */
+
+/* .modal-grid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+} */
+
+/* .modal-image-container { */
+    /* flex: 0 0 auto; */
+    /* flex: 1; */
+    /* width: 100%; */
+    /* width: 50%; */
+    /* padding-top: 0%; */
+    /* position: relative; */
+    /* overflow: hidden; */
+    /* display: block; */
+    /* agregue display  */
+/* } */
+
+/* .modal-image-container img { */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; Asegura que la imagen se ajuste correctamente */
+/* } */
+
+
+/* .modal-content { */
+    /* flex: 1 1 auto; */
+    /* flex: 1; */
+    /* padding: 1.5rem; */
+    /* overflow-y: auto; Permite desplazarse si el contenido es demasiado largo */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* agregue display, flex, justify  */
+/* } */
+
+/* .modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--dark); */
+    /* text-align: center;
+}
+
+.modal-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+.modal-description {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+
+.modal-includes h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.includes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.includes-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--light);
+    border-top: 1px solid #ddd;
+}
+
+.modal-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.btn-reserve {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reserve:hover {
+    background-color: #d3603d;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--secondary);
+} */
+
+/* Responsividad para dispositivos móviles */
+/* @media (max-width: 768px) { */
+    /* .modal-container { */
+        /* flex-direction: column; /* Cambia a diseño en columna */
+        /* max-width: 95%; Ajusta el ancho */
+    /* } */
+
+    /* .modal-image-container { */
+        /* display: none; Oculta la imagen en dispositivos móviles */
+    /* } */
+
+    /* .modal-content { */
+        /* width: 100%; El contenido ocupa todo el ancho */
+        /* padding: 1rem;
     }
 
-    /* Scroll personalizado */
-  /* .modal-description::-webkit-scrollbar,
-  .modal-includes::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  .modal-description::-webkit-scrollbar-thumb,
-  .modal-includes::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 5px;
-  } */
-  }
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-description {
+        font-size: 0.9rem;
+    }
+
+    .modal-price {
+        font-size: 1rem;
+    }
+} */
+/* Ajustes para pantallas pequeñas */
+/* @media (max-width: 480px) {
+    .modal-container {
+        width: 95%;
+        max-width: 400px; */
+        /* max-height: 95%; Ajusta la altura máxima en móviles */
+    /* } */
+
+    /* .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-description {
+        font-size: 0.9rem;
+    }
+
+    .modal-price {
+        font-size: 1rem;
+    }
+} */
+
 
 /* Footer */
 .footer {
@@ -1047,6 +1085,27 @@ img {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea el contenido hacia la derecha */
+    text-align: center; /* Asegura que el texto esté alineado a la derecha */
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+.footer-center div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre el ícono y el texto */
+    flex-wrap: wrap;
+}
+
+.footer-center p {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 .footer-column h3 {
@@ -1116,30 +1175,6 @@ img {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
-}
-
-/* Whatsapp Button */
-.whatsapp-btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: var(--shadow-md);
-    z-index: 99;
-    transition: var(--transition);
-}
-
-.whatsapp-btn:hover {
-    transform: scale(1.1);
-    box-shadow: var(--shadow-lg);
 }
 
 /* Media Queries para Responsividad */
