@@ -1,47 +1,68 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Datos de lo que incluye cada tour (puedes mover esto a una base de datos)
     const tourIncludes = {
-      "Cascadas Las Brisas": [
-        "Guía certificado",
-        "Equipo de seguridad",
-        "Botella de agua",
-        "Seguro básico",
-        "Snack local"
+      "Cascada Las Brisas": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
       ],
-      "Ritual de los Voladores": [
-        "Ceremonia tradicional",
-        "Guía cultural",
-        "Demostración completa",
-        "Explicación antropológica",
-        "Degustación de bebida ceremonial"
+      "Cascada La Escondida": [
+        "Guía",
+        "Chaleco salvavidas",
+        "Casco"
       ],
-      "Grutas Kaskalpak": [
-        "Guía espeleólogo",
+      "Cascada Las Hamacas": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Cascada Poza Verde": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Cascada Secreta": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Cascada Taxipehual": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Poza Atepatahuak": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
+      ],
+      "Gruta Chichikazapan": [
+        "Guía",
         "Casco y lámpara",
-        "Seguro especializado",
-        "Fotografías del recorrido",
-        "Refrigerio al terminar"
+        "Chaleco salvavidas"
       ],
-      "Tour Cafetalero": [
-        "Recorrido por plantación",
-        "Explicación del proceso",
-        "Degustación de 3 variedades",
-        "Descuento en tienda",
-        "Manual del buen catador"
+      "Cañón Del Duende": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas"
       ],
-      "Taller de Textiles": [
-        "Materiales incluidos",
-        "Instructor artesano",
-        "Muestra de técnicas",
-        "Tu propia creación",
-        "Certificado de participación"
+      "Yohualichan": [
+        "Guía",
+        "Explicación de la zona",
+        "Recorrido"
       ],
-      "Tirolesa y Rappel": [
-        "Equipo profesional",
-        "Instructores certificados",
-        "2 recorridos de tirolesa",
-        "1 descenso en rappel",
-        "Seguro de aventura"
+      "Textiles": [
+        "Guía",
+        "Explicación de proceso"
+      ],
+      "Cultura y Naturaleza": [
+        "Guía",
+        "Casco",
+        "Chaleco salvavidas",
+        "Recorrido por cascada",
+        "Explicación de taller de tejido",
+        "Recorrido taller de cera",
+        "Experiencia práctica de tejido y cera"
       ]
     };
   
@@ -88,6 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
             li.textContent = item;
             modalIncludes.appendChild(li);
           });
+        } else {
+          modalIncludes.innerHTML = '<li>No hay información disponible</li>';
         }
   
         // Mostrar el modal
@@ -105,11 +128,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Eventos para cerrar
     closeBtn.addEventListener('click', closeModal);
     modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
-  
+  // closeBtn.addEventListener('click', function() {
+  //   modal.classList.remove('active');
+  //   document.body.classList.remove('modal-open');
+  // });
+
     // Cerrar con Escape
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && modal.classList.contains('active')) {
         closeModal();
+        // modal.classList.remove('active');
+        // document.body.classList.remove('modal-open'); 
       }
     });
   
@@ -117,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     reserveBtn.addEventListener('click', function() {
       const tourName = modalTitle.textContent;
       alert(`Redirigiendo a reservación para: ${tourName}`);
-      // window.location.href = `/reservar?tour=${encodeURIComponent(tourName)}`;
+      window.location.href = `/reservar?tour=${encodeURIComponent(tourName)}`;
     });
 
   });
